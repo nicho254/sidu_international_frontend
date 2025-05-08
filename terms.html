@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidu International - Terms and Conditions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e6f2ff;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      transition: transform 6s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      padding: 40px;
+      box-sizing: border-box;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .content {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 800px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #007BFF;
+      text-align: center;
+    }
+
+    h2 {
+      color: #d39e00;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+<div id="sliderWrapper" style="display:flex; overflow:hidden;">
+  <div class="slider" id="slider">
+
+    <div class="slide" style="background-image: url('images/bg1.jpg');">
+      <div class="content">
+        <h1>Terms & Conditions</h1>
+        <h2>Loan Conditions for SMEs</h2>
+        <ul>
+          <li>Registration fee: Ksh 500</li>
+          <li>Interest: 10% first month</li>
+          <li>Processing fee:
+            <ul>
+              <li>Ksh 200 (2,000 - 4,900)</li>
+              <li>Ksh 500 (5,000 - 44,999)</li>
+              <li>Ksh 2,000 (45,000 - 100,000)</li>
+              <li>2% above 100,000</li>
+            </ul>
+          </li>
+          <li>Valuation:
+            <ul>
+              <li>Kiambu Town: Ksh 1,000</li>
+              <li>Outskirts: Ksh 2,000</li>
+              <li>Others: Based on distance</li>
+            </ul>
+          </li>
+          <li>Payment period: 1.5 to 2 months</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('images/bg2.jpg');">
+      <div class="content">
+        <h2>Logbook Loan Terms</h2>
+        <ul>
+          <li>Registration: Ksh 500</li>
+          <li>Search: Ksh 2,000</li>
+          <li>Tracker (Tuktuk/Boda): Ksh 1,500</li>
+          <li>Vehicle Tracker: Ksh 9,000</li>
+          <li>Valuation: Ksh 3,000</li>
+          <li>Agreement Fee: Ksh 3,000</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('images/bg3.jpg');">
+      <div class="content">
+        <h2>Title Deed Loan Terms</h2>
+        <ul>
+          <li>Registration: Ksh 500</li>
+          <li>Search: Ksh 3,500</li>
+          <li>Site Visit: Based on location</li>
+          <li>Agreement Fee: Ksh 3,000</li>
+        </ul>
+        <p><strong>Penalty:</strong> Ksh 50/day for late repayment. Up to 30% loan-to-value ratio. Collateral may be auctioned after 2 weeks default.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer" style="background-color: #007BFF; padding: 10px;">
+  &copy; 2025 Sidu International Ltd | Toiyanka Bldg, Kiambu & Kiserian |
+  Email: office@sidu.com | Phone: 0714175910
+</div>
+
+<script>
+  let index = 0;
+  const slides = document.querySelectorAll('.slide');
+  const slider = document.getElementById('slider');
+
+  function autoSlide() {
+    index = (index + 1) % slides.length;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  setInterval(autoSlide, 8000);
+</script>
+
+</body>
+</html>
